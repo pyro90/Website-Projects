@@ -1,0 +1,298 @@
+@font-face 
+{
+    font-family: 'PyreFont';
+    src: url('fonts/SFPRODISPLAYREGULAR.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'PyreFont';
+    src: url('fonts/SFPRODISPLAYBOLD.otf') format('opentype');
+    font-weight: bold;
+}
+
+h1, h2, h3
+{
+    font-weight: normal;
+}
+
+
+body 
+{
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-family: PyreFont;
+    font-weight: normal;
+}
+
+/* ------------------------Header------------------------ */
+#header 
+{
+    color: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1;
+    font-weight: normal;
+}
+
+#top-menu 
+{
+    height:40px;
+    background-color: rgba(0, 0, 0, 0.073);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#top-menu img 
+{
+    margin-right: 10px;
+    vertical-align: middle;
+    height: 20px;
+    width: auto;
+}
+
+#top-menu a 
+{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 5px 50px;
+    position:relative;
+}
+
+#top-menu a:hover 
+{
+    color: rgb(159, 159, 174);
+}
+
+#container 
+{
+    width: 100%;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.165);
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown-content 
+{
+    max-height: 0;
+    overflow:hidden;
+    position: absolute;
+    left: 0;
+    width: 100vw; 
+    background-color: #f1f1f1;
+    z-index: 1;
+    text-align: center;
+    padding: 0px 0;
+    transform:translateY(6px);
+
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.dropdown-content a 
+{
+    display: inline-block; 
+    padding: 120px 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content
+{
+    max-height: 500px;
+    opacity: 1;
+    padding: 0px 0;
+    transform: translateY(0px); 
+}
+
+  .dropdown-content a:hover 
+  {
+    background-color: #f1f1f1;
+  }
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* ------------------------Page Contents (Body) ------------------------ */
+
+#page-content 
+{
+    position: relative;
+    top: 100px; 
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.059); 
+    box-sizing: border-box;
+    transition: filter 0.5s ease-in-out;
+    overflow:visible;
+    overflow-y: auto;
+    height: calc(100vh - 100px); 
+    font-weight:normal;
+}
+
+#welcome
+{
+    width: 100%;
+    text-align: center;
+
+}
+/* ------------------------Showcase------------------------ */
+
+#showcase 
+{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 600px;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    min-width:980px;
+
+}
+
+#showcase::-webkit-scrollbar 
+{
+    display: none;
+  }
+
+.box 
+{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    min-width: 400px;
+    height: 550px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover 
+{
+    transform: translateY(-10px);
+}
+
+
+.pic 
+{
+    width: 100%;
+    height: 50%;
+    object-fit:contain;
+    border-radius: 100px;
+}
+
+.scp
+{
+    opacity: 0.3;
+    margin-left:20px;
+}
+
+.box h1
+{
+    opacity: 0.7;
+    margin-left:20px;
+    font-weight: bold;
+}
+
+.pricetext
+{
+    opacity: 0.6;
+    margin-left:20px;
+    font-size:14px;
+}
+
+/* ------------------------LearnMore------------------------ */
+
+#LM-Section
+{
+    display: block;
+    height: 200px;
+    padding-left:20px;
+}
+
+#quick-links
+{
+    display:flex;
+    flex-direction:column;
+}
+
+.button-container
+{
+    display:flex;
+    align-items: center;
+    height:100%;
+    flex-direction:row;
+    gap:20px;
+}
+
+#LM-Section button
+{
+    display:block;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    color: var(--clr-accent);
+    background-color: var(--clr-accent);
+    border: 1px solid grey;
+    border-radius:50px;
+    
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+#LM-Section button:hover
+{
+    transform: translateY(-10px);
+}
+
+/* ------------------------Footer------------------------ */
+#footer 
+{
+  display:block;
+  min-width:1000px;
+  width:100%;
+  flex-direction: column;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#tandc
+{
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+}
+
+#termsandconditions 
+{
+  width:800px;
+  margin:0 auto;
+  overflow:hidden;
+  
+}
+
+#footer h1
+{
+  font-size:14px;
+  color: rgba(0, 0, 0, 0.63);
+  font-weight: bold;
+}
+
+#footer p
+{
+    color: rgba(0, 0, 0, 0.557);
+    font-size:13px;
+}
+
+
